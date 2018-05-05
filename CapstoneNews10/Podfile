@@ -8,5 +8,4 @@ target 'CapstoneNews10' do
   # Pods for CapstoneNews10
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-  pod 'LNICoverFlowLayout'
 end
