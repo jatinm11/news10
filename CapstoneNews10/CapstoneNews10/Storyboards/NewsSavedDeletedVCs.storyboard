@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tqa-Xf-70S">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Saved View Controller-->
+        <scene sceneID="lQ3-sH-jR9">
+            <objects>
+                <viewController storyboardIdentifier="newsSaved" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="OF1-8e-8df" customClass="NewsSavedViewController" customModule="CapstoneNews10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bky-lV-rvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8w-ZE-9vn">
+                                <rect key="frame" x="8" y="55" width="359" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNl-Wj-m2J">
+                                        <rect key="frame" x="125" y="8" width="109" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="VUX-zX-WgG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="cNl-Wj-m2J" firstAttribute="top" secondItem="S8w-ZE-9vn" secondAttribute="top" constant="8" id="16F-95-dtP"/>
+                                    <constraint firstAttribute="height" constant="44" id="64K-Io-36t"/>
+                                    <constraint firstAttribute="bottom" secondItem="cNl-Wj-m2J" secondAttribute="bottom" constant="8" id="aRr-R3-UHe"/>
+                                    <constraint firstItem="cNl-Wj-m2J" firstAttribute="centerX" secondItem="S8w-ZE-9vn" secondAttribute="centerX" id="cBF-wC-9OP"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tpV-pn-vPx" appends="YES" id="DZ7-Yu-qGb"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="S8w-ZE-9vn" firstAttribute="leading" secondItem="Bky-lV-rvh" secondAttribute="leading" constant="8" id="58r-8k-6dB"/>
+                            <constraint firstItem="S8w-ZE-9vn" firstAttribute="top" secondItem="Bky-lV-rvh" secondAttribute="top" constant="55" id="NQX-Lf-W6i"/>
+                            <constraint firstAttribute="trailing" secondItem="S8w-ZE-9vn" secondAttribute="trailing" constant="8" id="tOT-5i-AR3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MFm-dh-rRX"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9Rg-Iu-uIz" appends="YES" id="4Pg-OF-svg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="newsSavedViewContainer" destination="S8w-ZE-9vn" id="d5E-Og-cmh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ng-vP-6Vg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tpV-pn-vPx">
+                    <connections>
+                        <action selector="dismissTapGesture:" destination="OF1-8e-8df" id="DCA-WY-66e"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9Rg-Iu-uIz">
+                    <connections>
+                        <action selector="DismissGestureTapped:" destination="OF1-8e-8df" id="Yxc-5K-0qg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-351" y="-63"/>
+        </scene>
+        <!--Delete News Confirmation View Controller-->
+        <scene sceneID="xJy-4n-9KS">
+            <objects>
+                <viewController storyboardIdentifier="deleteVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="tqa-Xf-70S" customClass="DeleteNewsConfirmationViewController" customModule="CapstoneNews10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dqP-Cx-lb2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n25-X8-7pw">
+                                <rect key="frame" x="16" y="273" width="343" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure that you want to delete this article?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Po-Zv-faT">
+                                        <rect key="frame" x="0.0" y="8" width="343" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="xkM-oJ-0h0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-o1-Z84">
+                                        <rect key="frame" x="75" y="82" width="193" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTL-UM-caF">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButtonTapped:" destination="tqa-Xf-70S" eventType="touchUpInside" id="YkC-dL-uhF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjr-75-JJ7">
+                                                <rect key="frame" x="148" y="0.0" width="45" height="30"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.12734011268377898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteButtonTapped:" destination="tqa-Xf-70S" eventType="touchUpInside" id="saA-L3-goX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Era-Ks-hHj"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="R2N-Ku-6B0"/>
+                                    <constraint firstItem="6Po-Zv-faT" firstAttribute="leading" secondItem="n25-X8-7pw" secondAttribute="leading" id="Scz-Js-Gxz"/>
+                                    <constraint firstItem="6Po-Zv-faT" firstAttribute="centerX" secondItem="n25-X8-7pw" secondAttribute="centerX" id="VTR-7y-UDq"/>
+                                    <constraint firstItem="V1x-o1-Z84" firstAttribute="centerX" secondItem="n25-X8-7pw" secondAttribute="centerX" id="hO6-5Y-264"/>
+                                    <constraint firstItem="6Po-Zv-faT" firstAttribute="top" secondItem="n25-X8-7pw" secondAttribute="top" constant="8" id="lub-iB-61c"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Po-Zv-faT" secondAttribute="trailing" id="oXf-XR-SK7"/>
+                                    <constraint firstAttribute="bottom" secondItem="V1x-o1-Z84" secondAttribute="bottom" constant="8" id="tz2-TY-RiJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fhK-9N-x7B" firstAttribute="trailing" secondItem="n25-X8-7pw" secondAttribute="trailing" constant="16" id="92k-Ja-fT9"/>
+                            <constraint firstItem="n25-X8-7pw" firstAttribute="centerX" secondItem="dqP-Cx-lb2" secondAttribute="centerX" id="A5W-1J-Nef"/>
+                            <constraint firstItem="n25-X8-7pw" firstAttribute="leading" secondItem="fhK-9N-x7B" secondAttribute="leading" constant="16" id="RrB-0s-I1Z"/>
+                            <constraint firstItem="n25-X8-7pw" firstAttribute="centerY" secondItem="dqP-Cx-lb2" secondAttribute="centerY" id="wQ4-fg-8Zg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fhK-9N-x7B"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewContainer" destination="n25-X8-7pw" id="IlJ-vl-HeO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QE-gO-hvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="-63"/>
+        </scene>
+        <!--News Deleted View Controller-->
+        <scene sceneID="37o-LB-WKJ">
+            <objects>
+                <viewController storyboardIdentifier="newsDeleted" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="fEw-CM-8ox" customClass="newsDeletedViewController" customModule="CapstoneNews10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UPx-hI-MED">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-9O-HqC">
+                                <rect key="frame" x="8" y="55" width="359" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Unsaved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wak-W9-tGX">
+                                        <rect key="frame" x="114.5" y="8" width="130" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="JBn-Qw-lOa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CJm-V7-Gp0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wak-W9-tGX" secondAttribute="bottom" constant="8" id="E7v-IA-GgL"/>
+                                    <constraint firstItem="Wak-W9-tGX" firstAttribute="top" secondItem="dNe-9O-HqC" secondAttribute="top" constant="8" id="NcJ-4M-VmJ"/>
+                                    <constraint firstItem="Wak-W9-tGX" firstAttribute="centerX" secondItem="dNe-9O-HqC" secondAttribute="centerX" id="zMg-zM-LUw"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WZr-UM-hxp" appends="YES" id="Qty-bI-030"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dNe-9O-HqC" secondAttribute="trailing" constant="8" id="Jvz-DS-LZ1"/>
+                            <constraint firstItem="dNe-9O-HqC" firstAttribute="top" secondItem="UPx-hI-MED" secondAttribute="top" constant="55" id="dAv-ln-qsz"/>
+                            <constraint firstItem="dNe-9O-HqC" firstAttribute="leading" secondItem="UPx-hI-MED" secondAttribute="leading" constant="8" id="zi8-E5-hsP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aNb-Uz-XW5"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6zY-as-oEy" appends="YES" id="z90-Ki-sH5"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSa-uU-fTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WZr-UM-hxp">
+                    <connections>
+                        <action selector="dismissTapGesture:" destination="fEw-CM-8ox" id="atJ-WD-qF2"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="6zY-as-oEy">
+                    <connections>
+                        <action selector="dismissGestureTapped:" destination="fEw-CM-8ox" id="p0W-8w-BzM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="318" y="-63"/>
+        </scene>
+    </scenes>
+</document>
